@@ -1,0 +1,18 @@
+.main-bg-color {
+    background-color: #8C9592;
+}
+.right-bg{
+    background-color: #A6BDB5;
+}
+.container-shadow{
+    box-shadow: -18px 9px 20px 12px;
+} 
+.contact ul{
+    font-size: smaller;
+}
+.right-bg .name{
+    font-family: 'Dancing Script';
+}
+.fs-smaller{
+    font-size: smaller;
+}
