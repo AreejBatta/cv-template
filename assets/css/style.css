@@ -1,54 +1,64 @@
 body {
-    background-color: #8C9592;
+	background-color: #8C9592;
 }
 
 section{
-    margin-top: 70px;
+	margin-top: 70px;
 }
 
 .right-bg{
-    background-color: #A6BDB5;
+	background-color: #A6BDB5;
 }
 .container-shadow{
-    box-shadow: -18px 9px 20px 12px;
+	box-shadow: -18px 9px 20px 12px;
 } 
 .contact ul{
-    font-size: smaller;
+	font-size: smaller;
 }
 .right-bg .name{
-    font-family: 'Dancing Script';
+	font-family: 'Dancing Script';
 }
 .fs-smaller{
-    font-size: smaller;
+	font-size: smaller;
 }
 
 nav a{
-    text-transform: capitalize;
-    transition: .5s;
+	text-transform: capitalize;
+	transition: .5s;
 }
 
 nav a:hover{
-    background-color: #A6BDB5;
-    border-radius: 5px;
-    letter-spacing: 1.5px;
+	background-color: #A6BDB5;
+	border-radius: 5px;
+	letter-spacing: 1.5px;
+}
+
+nav .btn:hover{
+	background-color: #A6BDB5;
+	border-radius: 5px;
+	letter-spacing: 1.5px;
+}
+
+.NewsItem{
+	margin-top: 120px;
 }
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
-  }
+	width: 20px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #d6dee1;
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #a8bbbf;
+}
