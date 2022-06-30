@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areej Batta CV</title>
+    <title>CV</title>
     <!-- fontawesome v6 -->
     <link rel="stylesheet" href="assets/css/all.min.css"/>
     <!-- bootstrap v5 -->
@@ -28,11 +28,87 @@
               <a class="nav-link" href="CV.pdf">CV Download</a>
               <a class="nav-link" href="news.html">News</a>
               <a class="nav-link" href="weather.html" >Weather</a>
+             <button onclick="openform()" class="forpop nav-link text-muted ">open form</button>
+
             </div>
           </div>
         </div>
       </nav>
-        <section class="main-bg-color vh-100 py-5 ">
+      <section  class="main-bg-color py-5 ">
+        <div id="overlay" class="position-fixed ">
+
+        <div id="popup" class="d-flex col-lg-12 col-md-8 col-sm-4 position-fixed mt-5 modale py-5 ps-2 container justify-content-center container-lg bg-white p-3 mb-5 bg-body  container-shadow" >
+            
+            <div class="form mt-2 ">
+                <!-- About me div -->
+                <div class=" d-flex w-100 align-items-center  mt-2 justify-content-center">
+                    <h3 class="text-muted ">About Me</h3>
+                    </div>
+                    
+               <div class="my-1" >
+                       <input class="innabout" type="text" id="abtme" placeholder="talk about yourself" >   
+               </div>
+              
+    
+               <div class="d-flex "> 
+                       <button id="clickabout" class="btn right-bg w-50 me-2 " >enter</button>
+                       <button id="vanishabout" class="btn bg-clr w-50" >clear</button>
+               </div>
+               <div>
+                       <button id="clearallabout" class="btn bg-dlta mt-1 mb-2 w-100">delete all data</button>
+               </div>
+               <!-- end of about me div -->
+               <!-- start of experince div -->
+                <div class=" d-flex w-100 align-items-center justify-content-center">
+                    <h3 class="text-muted">Experience</h3>
+                </div>
+           <div class="my-1 " >
+                   <input class="inn" type="text" id="year" placeholder="Year" >   
+           </div>
+           <div class="my-1">
+                   <input class="inn" type="text" id="experience" placeholder="Experience" >    
+           </div>
+           <div class="d-flex "> 
+                   <button id="click" class="btn right-bg w-50 me-2 " >enter</button>
+                   <button id="vanish" class="btn bg-clr w-50" >clear</button>
+           </div>
+           <div>
+                   <button id="clearall" class="btn bg-dlta mt-1 w-100">delete all data</button>
+           </div>
+           <!-- end oe experience div -->
+           
+                <div class=" d-flex w-100 align-items-center  mt-2 justify-content-center">
+
+                <h3 class="text-muted mt-2">Education</h3>
+                </div>
+                
+           <div class="my-1" >
+                   <input class="inned" type="text" id="degree" placeholder="Degree" >   
+           </div>
+           <div class="my-1">
+                   <input class="inned" type="text" id="university" placeholder="University" >    
+           </div>
+        
+
+           <div class="d-flex "> 
+                   <button id="clicked" class="btn right-bg w-50 me-2 " >enter</button>
+                   <button id="vanished" class="btn bg-clr w-50" >clear</button>
+           </div>
+           <div>
+                   <button id="clearalled" class="btn bg-dlta mt-1 w-100">delete all data</button>
+           </div>
+           <button type="submit" onclick="closeform()" class="close-button nav-lnk forpop btn fs-5 ms-5 text-muted mt-2 ">Submit</button>
+
+           </div>
+
+           </div>
+        </div>
+           </div>
+         
+        
+      </section>
+      <section class="main-bg-color vh-100 py-5 ">
+
             <div class="container container-lg bg-white p-3 mb-5 bg-body  container-shadow" >
                 <div class="row p-2" style="height:100%"> 
                     <div class="right-bg col-lg-4 col-sm-12 container-lg mx-0 ">
@@ -54,16 +130,18 @@
                             </li>
                             </ul>
                         </div>
-                        <div class="language mt-3 text-center">
+                        <div class="language mt-3 text-center ">
                             <h3 class="text-muted fs-3 pt-3 pe-3 ">Language</h3>
-                            <ul  class="list-unstyled list-group list-group-horizontal text-muted fs-smaller w-80 ms-4">
+                            <div class="">
+                            <ul  class="list-unstyled list-group list-group-horizontal justify-content-center text-muted fs-smaller w-80 ">
                                 <li class="me-2">English</li>
                                     <li class="">very good</li>
                             </ul>
-                            <ul  class="list-unstyled list-group list-group-horizontal text-muted fs-smaller w-80 ms-4">
+                            <ul  class="list-unstyled list-group list-group-horizontal justify-content-center text-muted fs-smaller w-80 ">
                                 <li class="me-3">Arabic</li>
                                 <li class="">very good</li>
                                 </ul>
+                        </div>
                         </div>
                         <div class="achivments text-center ms-1 border border-secondary container mt-4" style="height:155px; width: 96%;">
                             <div class="row">
@@ -89,23 +167,33 @@
                         <div class="about bg-secondary w-100 pb-2" style="height: 100px;">
                             <h3 class=" fs-4 text-center text-white-50">About me</h3>
                             <div class="text-justify container">
-                            <p class="text-justify fs-smaller text-white-50">Ambitious Electrical engineer with seven years experience in power, lighting, and low voltage design.Experience in programing language got it from being fast learner.</p>
-                            </div>
+                            <p id="aboutpara" class="text-justify fs-smaller text-white-50"> </p>
+                </div>
                         </div>
                 <span class="d-block w-100 bg-secondary mt-2" style="height:2px;"></span>
-                <div class="experience w-100  container mt-2 pb-2">                  
+                <div class="experience w-100  container  mt-2 pb-2">                  
                     <ul class=" container w-50 list-unstyled list-group list-group-horizontal text-center fs-4" >
                         <li >
-                    <i class="fa fa-user-gear text-muted fs-4"> 
-                    </i> </li>
+                    <i class="fa fa-user-gear text-muted fs-4"> </i> 
+                    </li>
                     <li >
                         <h3 class=" fs-4 text-muted ms-2">Experience</h3>
                     </li>
                     </ul>
-                    <ul class="fs-smaller mt-2 text-justify w-100 text-muted list-group">
-                        <li > Website development from initial design through completion</li>
-                        <li>worked with three developers team to achive the design goals</li>
-                    </ul>
+                    <table id="tbb" class="text-center table table-striped w-100 text-muted ">
+                        <thead>
+                                <tr> 
+                                        <th class="tred">Year</th>
+
+                                        <th class="tred">Company</th>
+                        
+                                </tr>
+                        </thead>
+                        <tbody id="tableinfo" class="w-100">
+            
+                        </tbody>
+                        
+                </table>
                 </div>
                 <div class="education w-100  container mt-2 pb-2">                  
                     <ul class=" container w-50 list-unstyled list-group list-group-horizontal text-center fs-4" >
@@ -116,17 +204,27 @@
                         <h3 class=" fs-4 text-muted ms-2">Education</h3>
                     </li>
                     </ul>
-                    <ul class="fs-smaller mt-2 text-justify w-100 text-muted list-group">
-                        <li > full-Stack development 9 months course/Knowledge Academy</li>
-                        <li>  Full-Stack development 4 months course/ Udacity</li>
-                        <li>  Bcs degree in Electrical Engineering/ An-Najah National Uni.</li>
-                    </ul>
+                    <table id="tbbed" class="text-center table table-striped w-100 text-muted ">
+                        <thead>
+                                <tr> 
+                                        <th class="tred">Degree</th>
+
+                                        <th class="tred">University</th>
+                        
+                                </tr>
+                        </thead>
+                        <tbody id="tableinfoed" class="w-100">
+            
+                        </tbody>
+                        
+                </table>
                 </div>
                 </div>
                     </div>
             </div>
         </section>
-    <!-- JavaScript Bundle with Popper -->
+        <script src="assets/js/script.js"></script>
+        <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

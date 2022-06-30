@@ -1,64 +1,122 @@
 body {
-	background-color: #8C9592;
+    background-color: #8C9592;
 }
 
+.bg-clr {
+  background-color: rgba(0,0,0,0.5);
+}
+.bg-dlta {
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+}
 section{
-	margin-top: 70px;
+    margin-top: 70px;
 }
 
 .right-bg{
-	background-color: #A6BDB5;
+    background-color: #A6BDB5;
 }
 .container-shadow{
-	box-shadow: -18px 9px 20px 12px;
+    box-shadow: -18px 9px 20px 12px;
 } 
 .contact ul{
-	font-size: smaller;
+    font-size: smaller;
+}
+.forpop {
+    border: none;
+    background: #fff;
+outline: none;
 }
 .right-bg .name{
-	font-family: 'Dancing Script';
+    font-family: 'Dancing Script';
 }
 .fs-smaller{
-	font-size: smaller;
+    font-size: smaller;
 }
 
 nav a{
-	text-transform: capitalize;
-	transition: .5s;
+    text-transform: capitalize;
+    transition: .5s;
 }
 
 nav a:hover{
-	background-color: #A6BDB5;
-	border-radius: 5px;
-	letter-spacing: 1.5px;
+    background-color: #A6BDB5;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
 }
 
-nav .btn:hover{
-	background-color: #A6BDB5;
-	border-radius: 5px;
-	letter-spacing: 1.5px;
+.navbar-nav button{
+  text-transform: capitalize;
+  transition: .5s;
 }
-
-.NewsItem{
-	margin-top: 120px;
+.navbar-nav button:hover{
+  background-color: #A6BDB5;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
 }
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-	width: 20px;
-}
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
 
-::-webkit-scrollbar-track {
-	background-color: transparent;
-}
+  .modale {
+    z-index:100;
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%) scale(0);
+    transition: 200ms ease-in-out;
+    /* max-width: 90%; */
+  }
+  .modale.active {
+    transform: translate(-50% , -50%) scale(1);
 
-::-webkit-scrollbar-thumb {
-	background-color: #d6dee1;
-	border-radius: 20px;
-	border: 6px solid transparent;
-	background-clip: content-box;
-}
+  }
+  #overlay {
+    opacity: 0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transition: 200ms ease-in-out;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
 
-::-webkit-scrollbar-thumb:hover {
-	background-color: #a8bbbf;
-}
+  }
+  #overlay.active{
+    opacity: 1;
+
+    pointer-events:all ;
+
+  }
+
+  .close-button{
+    background-color: #A6BDB5;
+
+    text-transform: capitalize;
+    transition: .5s;
+  }
+  .close-button:hover{
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+  }
+
+  .tred{
+
+    padding: 0.5rem 6.5rem !important;
+  }
