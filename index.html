@@ -28,12 +28,41 @@
               <a class="nav-link" href="CV.pdf">CV Download</a>
               <a class="nav-link" href="news.html">News</a>
               <a class="nav-link" href="weather.html" >Weather</a>
-             <button onclick="openform()" class="forpop nav-link text-muted ">open form</button>
-
+             <button onclick="openform()" class="forpop nav-link text-muted ">Open Form</button>
+             <button onclick="openform2()" class="forpop nav-link text-muted ">Open Form2</button>
             </div>
           </div>
         </div>
       </nav>
+      <!--adlah faqih section-->
+      <section class="section2">
+        <div id="overlay2" class="position-fixed ">
+
+            <div id="popup2" class="d-flex col-lg-12 col-md-8 col-sm-4 position-fixed mt-5 modale py-5 ps-2 container justify-content-center container-lg bg-white p-3 mb-5 bg-body  container-shadow" >
+                
+                <div class="form mt-2 ">
+                    <div class="add-info">
+                        <div class="container-info">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Name" id="cvName">
+                            <label for="">Email</label>
+                            <input type="email" placeholder="email" id="cvEmail">
+                            <label for="">linkedin</label>
+                            <input type="text" placeholder="linkedin" id="cvLinked">
+                            <label for="">Language</label>
+                            <textarea id="language" placeholder="language"></textarea>
+                            <label for="">Achievements</label>
+                            <textarea id="Achievements" placeholder="Achievements"></textarea>
+                            <div></div>
+                            <button onclick="closeform2()" id="b1">Done</button>
+                            <button onclick="closeform22()" id="b2">Save</button>
+                        </div>
+                    </div>
+               </div> 
+               </div>
+            </div>
+      </section>
+      <!--adlah faqih end section-->
       <section  class="main-bg-color py-5 ">
         <div id="overlay" class="position-fixed ">
 
@@ -102,11 +131,8 @@
            </div>
 
            </div>
-        </div>
-           </div>
-         
-        
-      </section>
+        </div>  
+    </section>
       <section class="main-bg-color vh-100 py-5 ">
 
             <div class="container container-lg bg-white p-3 mb-5 bg-body  container-shadow" >
@@ -116,54 +142,38 @@
                         <div class="bg-white mt-2 mx-auto rounded-circle" style="height:145px; width: 145px;" >
                             <img src="assets/imgs/test.png" class="rounded-circle mt-2 pe-2 " style="width:130px; height:130px;" />
                         </div>
-                        <p class="text-muted text-center fs-1 name fw-bold"> Areej Batta</p>
+                        <div id="data1">
+                            
+                    </div>
                         <div class="contact px-3 text-center" style="height:70px;">
                             <h3 class="text-muted fs-3 ">Contact info</h3>
                             <ul  class="list-unstyled ">
                             <li class="text-center ps-1">
-                            <a href="mailto:areej.ibatta@gmail.com" class="text-muted text-decoration-none">
-                                <i class="fa-solid fa-envelope pe-1"></i> areej.ibatta@gmail.com</a>
+                            <a id="data2" href="mailto:areej.ibatta@gmail.com" class="text-muted text-decoration-none">
+                                </a>
                             </li>
                             <li class="text-center ps-1">
-                            <a href="https://www.linkedin.com/in/areej-batta-a338919b/" class="text-muted text-decoration-none ">
-                                <i class="fa-brands fa-linkedin pe-2"></i>www.shorturl.at/nqPQ5</a>
+                            <a id="data3" href="https://www.linkedin.com/in/areej-batta-a338919b/" class="text-muted text-decoration-none ">
+                                </a>
                             </li>
                             </ul>
                         </div>
                         <div class="language mt-3 text-center ">
                             <h3 class="text-muted fs-3 pt-3 pe-3 ">Language</h3>
-                            <div class="">
-                            <ul  class="list-unstyled list-group list-group-horizontal justify-content-center text-muted fs-smaller w-80 ">
-                                <li class="me-2">English</li>
-                                    <li class="">very good</li>
-                            </ul>
-                            <ul  class="list-unstyled list-group list-group-horizontal justify-content-center text-muted fs-smaller w-80 ">
-                                <li class="me-3">Arabic</li>
-                                <li class="">very good</li>
-                                </ul>
+                            <div class=""id="data4">
+                            
                         </div>
                         </div>
                         <div class="achivments text-center ms-1 border border-secondary container mt-4" style="height:155px; width: 96%;">
                             <div class="row">
                                 <h3 class="text-muted mt-2 fs-4 pe-3">Achievements</h3>
-                                <ul class="text-muted fs-smaller  mt-2 list-unstyled">
-                                    <li class="mb-1" >
-                                    Front-end designs
-                                    </li>
-                                    <li class="mb-1" >
-                                        responsive design
-                                    </li>
-                                    <li class="mb-1" >
-                                        bootstrap design
-                                    </li>
-                                </ul>
-
+                                <div id="data5">         
                             </div>
-
+                            </div>
                         </div>
                         </div>
                     </div>
-                    <div class="left col-lg-8 col-sm-12 bg-white container  mx-0">
+                    <div class="left col-lg-8 col-sm-12 bg-white container mx-0">
                         <div class="about bg-secondary w-100 pb-2" style="height: 100px;">
                             <h3 class=" fs-4 text-center text-white-50">About me</h3>
                             <div class="text-justify container">
@@ -171,7 +181,7 @@
                 </div>
                         </div>
                 <span class="d-block w-100 bg-secondary mt-2" style="height:2px;"></span>
-                <div class="experience w-100  container col-sm-3 mt-2 pb-2">                  
+                <div class="experience w-100  container  mt-2 pb-2">                  
                     <ul class=" container w-50 list-unstyled list-group list-group-horizontal text-center fs-4" >
                         <li >
                     <i class="fa fa-user-gear text-muted fs-4"> </i> 
@@ -183,9 +193,9 @@
                     <table id="tbb" class="text-center table table-striped w-100 text-muted ">
                         <thead>
                                 <tr> 
-                                        <th class="tred col-sm-12">Year</th>
+                                        <th class="tred">Year</th>
 
-                                        <th class="tred col-sm-12">Company</th>
+                                        <th class="tred">Company</th>
                         
                                 </tr>
                         </thead>
@@ -207,9 +217,9 @@
                     <table id="tbbed" class="text-center table table-striped w-100 text-muted ">
                         <thead>
                                 <tr> 
-                                        <th class="tred col-sm-12">Degree</th>
+                                        <th class="tred">Degree</th>
 
-                                        <th class="tred col-sm-12">University</th>
+                                        <th class="tred">University</th>
                         
                                 </tr>
                         </thead>

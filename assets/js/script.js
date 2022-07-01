@@ -206,6 +206,128 @@ function tested(name){
 
 }
 
+
+
+
+
+
+
+
+let cvName=document.getElementById("cvName");
+let cvEmail=document.getElementById("cvEmail");
+let cvLinked=document.getElementById("cvLinked");
+let language=document.getElementById("language");
+let Achievements=document.getElementById("Achievements");
+var info11;
+let data1=document.getElementById("data1");
+let data2=document.getElementById("data2");
+let data3=document.getElementById("data3");
+let data4=document.getElementById("data4");
+let data5=document.getElementById("data5");
+if(localStorage.getItem("first-data")!=null){
+    info11=JSON.parse(localStorage.getItem("first-data"));
+    display_info2();
+    display_info3();
+    display_info4();
+    display_info5();
+    display_info6();
+}
+else{
+     info11=[];
+}
+function closeform2(){
+    popup2.classList.remove("active");
+    overlay2.classList.remove("active");
+
+}
+function closeform22(){
+
+    let course1={
+        cName:cvName.value,
+        cEmail:cvEmail.value,
+        cLinked:cvLinked.value,
+        cLang:language.value,
+        cAch:Achievements.value
+    }
+    info11.push(course1);
+    localStorage.setItem("first-data",JSON.stringify(info11));
+    display_info2();
+    display_info3();
+    display_info4();
+    display_info5();
+    display_info6();
+    clear_all_info();
+}
+
+function first_data_ad(){
+    let course1={
+        cName:cvName.value,
+        cEmail:cvEmail.value,
+        cLinked:cvLinked.value,
+        cLang:language.value,
+        cAch:Achievements.value
+    }
+    info11.push(course1);
+    localStorage.setItem("first-data",JSON.stringify(info11));
+}
+function display_info2(){
+    let result=``;
+        result+=`
+        <p class="text-muted text-center fs-1 name fw-bold" > ${cvName.value}
+        </p> 
+        `;
+        data1.innerHTML=result;
+}
+
+
+function display_info3(){
+    let result=``;
+        result+=`<i class="fa-solid fa-envelope pe-1"></i>${cvEmail.value}`;
+        data2.innerHTML=result;
+}
+
+function display_info4(){
+    let result=``;
+        result+=`<i class="fa-brands fa-linkedin pe-2"></i>${cvLinked.value}`;
+        data3.innerHTML=result;
+}
+function display_info5(){
+    let result=``;
+    var sLang = document.getElementById("language").value.split('\n');
+
+    for (var i = 0; i < sLang.length; i++) {
+         result+=`<ul  class="list-unstyled list-group list-group-horizontal justify-content-center text-muted fs-smaller w-80 ">
+         <li class="me-2">${sLang[i]}</li>
+     </ul>`
+    }
+    data4.innerHTML=result;
+}
+function display_info6(){
+    let result=``;
+    var sAch = document.getElementById("Achievements").value.split('\n');
+
+    for (var i = 0; i < sAch.length; i++) {
+         result+=`<ul class="text-muted fs-smaller  mt-2 list-unstyled">
+         <li class="mb-1" >
+         ${sAch[i]}
+         </li>
+     </ul>`
+    }
+       data5.innerHTML=result;
+}
+function clear_all_info(){
+    cvName.value="";
+    cvEmail.value="";
+    cvLinked.value="";
+    language.value="";
+    Achievements.value="";
+}
+
+
+
+
+
+
 // pop-up
 var popup=document.getElementById("popup");
 var overlay=document.getElementById("overlay");
@@ -222,7 +344,18 @@ function closeform(){
     overlay.classList.remove("active");
 
 }
+//pop-up2
+var popup2=document.getElementById("popup2");
+var overlay2=document.getElementById("overlay2");
 
+
+function openform2(){
+    popup2.classList.add("active");
+    overlay2.classList.add("active");
+
+}
+
+//end pop-up2
 // about
 var aboutme=document.getElementById("abtme");
 var btnab=document.getElementById("clickabout");
